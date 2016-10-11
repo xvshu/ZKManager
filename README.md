@@ -7,7 +7,7 @@ Zookeeper management project under the control of simple rights（简单权限�
 >>####userquery only can query<br>
 >>####useradmin can modify date<br>
 >>####h2con , h2user , h2password is database for this project<br>
-If you want to know build h2database ,  please go my blog<br>
+If you want to know build h2database ,  please look my blog<br>
 http://blog.csdn.net/xvshu/article/details/51726291
 
 
