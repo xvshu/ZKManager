@@ -17,6 +17,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.xvshu.zk.manager.util.ZkCfgManager;
 
+import javax.servlet.http.HttpSession;
+
 @Controller
 @RequestMapping("/zkcfg")
 public class ZkCfgController {
@@ -26,13 +28,28 @@ public class ZkCfgController {
 	static ZkCfgManager zkCfgManager = ZkCfgFactory.createZkCfgManager();
 	
 	@RequestMapping(value="/queryZkCfg")
-	public @ResponseBody Map<String, Object> queryZkCfg(@RequestParam(required=false) int page,@RequestParam(required=false) int rows){
+	public @ResponseBody Map<String, Object> queryZkCfg(@RequestParam(required=false) int page,@RequestParam(required=false) int rows,HttpSession session){
 		
 		try {
 			log.info(new Date()+"");
 			Map<String, Object> _map = new HashMap<String, Object>();
 			_map.put("rows", zkCfgManager.query(page,rows));
 			_map.put("total", zkCfgManager.count());
+			return _map;
+		} catch (Exception e) {
+			e.printStackTrace();
+			log.error(e.getMessage());
+		}
+		return null;
+	}
+
+	@RequestMapping(value="/queryZkManager")
+	public @ResponseBody Map<String, Object> queryZkManager(HttpSession session){
+
+		try {
+			log.info(new Date()+"");
+			Map<String, Object> _map = new HashMap<String, Object>();
+			_map.put("userM", session.getAttribute("userM"));
 			return _map;
 		} catch (Exception e) {
 			e.printStackTrace();

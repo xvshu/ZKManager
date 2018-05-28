@@ -24,6 +24,14 @@ body {
 				$.messager.alert('提示', data);
 			}
 		});
+
+        $.post("zkcfg/queryZkManager",{},function(result){
+            if(!result.userM){
+                //只读权限
+                $("#mm_add_info").hide();
+
+            }
+        });
 		
 	});
 </script>
@@ -37,7 +45,7 @@ body {
 			<tr>
 				<td><label >data：</label></td>
 				<td>
-					<textarea rows="20" cols="150" name="data">${data}
+					<textarea rows="15" cols="150" name="data">${data}
 					</textarea>
 				</td>
 			</tr>
@@ -99,7 +107,7 @@ body {
 		</table>
 	</div>
 	<br/>
-	<a href="#" class="easyui-linkbutton" data-options="iconCls:'icon-save'" onclick="javascript:$('#ff').submit();">保存</a>
+	<a href="#" id="mm_add_info" class="easyui-linkbutton" data-options="iconCls:'icon-save'" onclick="javascript:$('#ff').submit();">保存</a>
 	</form>
 	<%-- 	${data } ${czxid } ${mzxid } ${ctime } ${mtime } ${version } ${cversion
 	} ${aversion } ${ephemeralOwner } ${dataLength } ${numChildren }

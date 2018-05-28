@@ -21,6 +21,23 @@
 			},
 			url:'zkcfg/queryZkCfg'
 		});
+        $.post("zkcfg/queryZkManager",{},function(result){
+            if(!result.userM){
+                //只读权限
+                $("#sys_add").hide();
+                $("#sys_edit").hide() ;
+                $("#sys_delete").hide();
+
+                $("#mm_add").hide();
+                $("#mm_edit").hide();
+
+                $("#mm_add_win").hide();
+                $("#mm_edit_win").hide();
+
+
+
+			}
+        });
 	}
 	
 
@@ -270,9 +287,9 @@
 	    </table> 
 	    
 	    <div id="zkweb_tb">    
-		    <a href="#" class="easyui-linkbutton" iconCls="icon-add" plain="true" onclick="javascript:$('#zkweb_add_cfg').window('open');">添加</a>    
-		    <a href="#" class="easyui-linkbutton" iconCls="icon-save" plain="true" onclick="openUpdateWin()">更新</a>    
-		    <a href="#" class="easyui-linkbutton" iconCls="icon-no" plain="true" onclick="openDelWin()">删除</a>
+		    <a href="#" id="sys_add" class="easyui-linkbutton" iconCls="icon-add" plain="true" onclick="javascript:$('#zkweb_add_cfg').window('open');">添加</a>
+		    <a href="#" id="sys_edit" class="easyui-linkbutton" iconCls="icon-save" plain="true" onclick="openUpdateWin()">更新</a>
+		    <a href="#" id="sys_delete" class="easyui-linkbutton" iconCls="icon-no" plain="true" onclick="openDelWin()">删除</a>
 			<a href="#" class="easyui-linkbutton" iconCls="icon-redo" plain="true" onclick="logout()">退出系统</a>
 		</div>
 
@@ -290,8 +307,8 @@
     	</ul> 
     	<!-- right -->
     	<div id="mm" class="easyui-menu" style="width:120px;">  
-	        <div onclick="javascript:$('#w').window('open');" data-options="iconCls:'icon-add'">添加</div>  
-	        <div onclick="remove()" data-options="iconCls:'icon-remove'">删除</div>  
+	        <div id="mm_add" onclick="javascript:$('#w').window('open');" data-options="iconCls:'icon-add'">添加</div>
+	        <div id="mm_edit" onclick="remove()" data-options="iconCls:'icon-remove'">删除</div>
 	        <div class="menu-sep"></div>  
 	        <div onclick="expand()">展开</div>  
 	        <div onclick="collapse()">收起</div>  
@@ -305,8 +322,8 @@
 		    </div>  
 		</div>  
 		<div id="tab-tools">  
-        	<a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-add'" onclick="javascript:$('#w').window('open');"></a>  
-        	<a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-remove'" onclick="remove()"></a>  
+        	<a id="mm_add_win" href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-add'" onclick="javascript:$('#w').window('open');"></a>
+        	<a id="mm_edit_win" href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-remove'" onclick="remove()"></a>
     	</div>
 		
     </div>  

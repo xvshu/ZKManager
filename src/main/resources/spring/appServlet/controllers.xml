@@ -11,8 +11,8 @@
 	<mvc:view-controller path="/" view-name="home"/>
 	<mvc:view-controller path="/home" view-name="home"/>
 	<mvc:view-controller path="/login" view-name="login"/>
-	
-	<context:component-scan base-package="com.yasenagat.zkweb" />
+
+	<context:component-scan base-package="com.xvshu.zk.manager" />
 
 	<mvc:interceptors>
 		<mvc:interceptor>
@@ -20,5 +20,5 @@
 			<bean id="loginInterceptor" class="com.xvshu.zk.manager.web.LoginInterceptor"/>
 		</mvc:interceptor>
 	</mvc:interceptors>
-	 
+
 </beans>
