@@ -1,13 +1,21 @@
 # ZKManager
-Zookeeper management project under the control of simple rights（简单权限控制下的zookeeper管理项目）
+简单权限控制下的zookeeper管理项目
 
-##step：
->###1,Use maven build war package.
->###2,Edit \src\main\resources\zk.properties modify user and database
->>####userquery only can query<br>
->>####useradmin can modify date<br>
->>####h2con , h2user , h2password is database for this project<br>
-If you want to know build h2database ,  please look my blog<br>
-http://blog.csdn.net/xvshu/article/details/51726291
+# 步骤：
+>1,使用maven构建项目
+>2,修改 项目\src\main\resources\zk.properties 文件为可用配置
+  userquery只能查询的用户<br>
+  useradmin可修改数据的用户<br>
+  h2con , h2user , h2password 修改为自身h2配置<br>
+    可参考博客安装h2数据库：<br>
+    http://blog.csdn.net/xvshu/article/details/51726291
+    
+# 主要页面
+登录
 
+<img  src="https://github.com/xvshu/ZKManager/blob/master/doc/login.jpg">
+
+主页
+
+<img  src="https://github.com/xvshu/ZKManager/blob/master/doc/main.jpg">
 
