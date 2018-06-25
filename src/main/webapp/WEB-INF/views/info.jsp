@@ -45,7 +45,7 @@ body {
 			<tr>
 				<td><label >data：</label></td>
 				<td>
-					<textarea rows="15" cols="150" name="data">${data}
+					<textarea rows="13" cols="130" name="data">${data}
 					</textarea>
 				</td>
 			</tr>

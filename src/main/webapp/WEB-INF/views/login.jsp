@@ -11,23 +11,38 @@
     <title>登录</title>
     <script type="text/javascript" src="resources/login/jquery-1.8.3.min.js"></script>
     <link rel="stylesheet" type="text/css" href="resources/login/login.css">
+    <style>
+        #dd_parent {display: table;}
+        #dd_child {
+            display: table-cell;
+            vertical-align: middle;
+        }
+    </style>
 </head>
 <body>
 
 
     <div class="content">
 
-
+        <!--  账号和密码组    -->
+        <div class="dd_parent" style="text-align: center">
+            <div class="dd_child" style="color: #A64949;font-size: 35px;"><img src="resources/img/uncle.png" style="height: 80px;vertical-align:middle;" ></img><b>Zookeeper管理工具</b></div>
+            <p></p>
+            <p></p>
+            <p></p>
+        </div>
         <!--  登录面板    -->
         <div class="panel">
-
-            <!--  账号和密码组    -->
+            <div class="group" style="text-align: center;color: #3baae3;">
+                <label ><b>用户登录</b></label>
+                <p></p>
+            </div>
             <div class="group">
-                <label>账号</label>
+                <%--<label>账号</label>--%>
                 <input placeholder="请输入账号" id="username">
             </div>
             <div class="group">
-                <label>密码</label>
+                <%--<label>密码</label>--%>
                 <input placeholder="请输入密码" type="password" id="password">
             </div>
 

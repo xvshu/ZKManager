@@ -5,10 +5,12 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-	<link rel="stylesheet" type="text/css" href="resources/easyui/themes/default/easyui.css">
-	<link rel="stylesheet" type="text/css" href="resources/easyui/themes/icon.css">
+	<link rel="stylesheet" type="text/css" href="resources/easyui/themes/insdep/easyui.css">
+	<link rel="stylesheet" type="text/css" href="resources/easyui/themes/insdep/icon.css">
 	<script type="text/javascript" src="resources/jquery-1.8.3.min.js"></script>
 	<script type="text/javascript" src="resources/easyui/jquery.easyui.min.js"></script>
+	<script type="text/javascript" src="resources/easyui/themes/insdep/jjquery.insdep-extend.min.js"></script>
+
 	<script type="text/javascript" src="resources/easyui/locale/easyui-lang-zh_CN.js"></script>
 
 

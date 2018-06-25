@@ -55,13 +55,13 @@ body{
     border-left: 1px solid #CC865E;/*当输入框成为焦点时，左边框颜色编程褐色*/
 }
 .content .panel .login button {
-    background-color: #CC865E;/*按钮的背景颜色*/
+    background-color: #A64949;/*按钮的背景颜色*/
     width: 260px;/*按钮的宽度*/
 }
 .content .panel .login button:hover {
     background-color: white;/*按钮选中后背景颜色为白色*/
-    color:  #CC865E;/*按钮选中后字体颜色为褐色*/
-    border: 1px solid #CC865E;/*按钮选中后边框颜色为褐色*/
+    color:  #A64949;/*按钮选中后字体颜色为褐色*/
+    border: 1px solid #A64949;/*按钮选中后边框颜色为褐色*/
 }
 
 

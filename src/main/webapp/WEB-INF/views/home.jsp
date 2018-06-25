@@ -6,7 +6,7 @@
 <jsp:include page="head.jsp"></jsp:include>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>This is ZkWeb</title>
+<title>ZKManager</title>
 <script type="text/javascript">
 
 	$(function(){
@@ -33,8 +33,6 @@
 
                 $("#mm_add_win").hide();
                 $("#mm_edit_win").hide();
-
-
 
 			}
         });
@@ -271,10 +269,10 @@
 
 <body class="easyui-layout" id="zkweb_body">  
 
-    <div data-options="region:'north',border:false" style="height:200px" >
+    <div data-options="region:'north',border:false" style="height:300px" >
     
 	    <center>
-	    <table class="easyui-datagrid" title="zookeeper cfg" id="zkweb_zkcfg"
+	    <table class="easyui-datagrid" style="height: 290px;" title="Zookeeper列表" id="zkweb_zkcfg"
 	           data-options="pagination:true,singleSelect:true,fitColumns:true,rownumbers:true,pageSize:5" toolbar="#zkweb_tb" >  
 	        <thead>  
 	            <tr>  
@@ -302,7 +300,7 @@
     
     <div data-options="region:'south',border:false" style="height:50px;background:#A9FACD;padding:10px;">south region</div>  
     -->
-    <div data-options="region:'west',split:true,title:'zookeeper tree'" style="width:150px;padding:10px;height:120px;">
+    <div data-options="region:'west',split:true,title:'zookeeper tree'" style="width:250px;padding:10px;height:120px;">
     	<ul id="zkTree" class="easyui-tree" >
     	</ul> 
     	<!-- right -->
@@ -329,7 +327,7 @@
     </div>  
     
     <!-- add -->
-    <div id="w" class="easyui-window" title="添加节点" data-options="iconCls:'icon-add',modal:true,closed:true,maximizable:false" style="width:500px;padding:10px;">  
+    <div id="w" class="easyui-window" title="添加节点" data-options="iconCls:'icon-add',modal:true,closed:true,maximizable:false" style="width:800px;padding:10px;">
         
         <div style="text-align:center;padding:5px">
         	输入节点名称:
@@ -343,7 +341,7 @@
         
     </div>
     
-    <div id="zkweb_add_cfg" class="easyui-window" title="添加配置信息" data-options="iconCls:'icon-add',modal:true,closed:true,maximizable:false" style="width:280px;height:170px;padding:10px;">  
+    <div id="zkweb_add_cfg" class="easyui-window" title="添加配置信息" data-options="iconCls:'icon-add',modal:true,closed:true,maximizable:false" style="width:360px;height:170px;padding:10px;">
         
         <form id="zkweb_add_cfg_form" method="post" action="zkcfg/addZkCfg">  
 		    <table>    
